@@ -36,7 +36,7 @@ Commands followed while creating project -
   
   
   Explanation of project framwork -
-  1) app/android, folder consists of calculator apk (as I don't have android device & my emulator doesn't have native calculator app, used this google calculator apk)
+  1) app/android, folder consists of calculator apk (my emulator doesn't have native calculator app, used this google calculator apk)
   2) test/specs, folder consists the test case which will be running for this specific project. this is also defined in wdio.conf.js
   3) test/pageObjects, folder consists of page objects of the calculator screen (as project is small, only used to fetch a button)
   4) test/data, folder consists of a dataList class in which the user can edit the first number & second number according to his desire and also need to update the result
