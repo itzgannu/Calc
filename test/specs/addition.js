@@ -3,7 +3,6 @@ const CalcScreen = require("../pageObjects/android/calc.screen");
 
 describe('DotDash Task', () => {
     it('Add two numbers and Verify the result', async() => {
-        const resultField =  $('~No result');
 
         //getting data from dataList.js
         var firstNumber = DataList.firstNumber;
@@ -14,21 +13,16 @@ describe('DotDash Task', () => {
         const resultNumber =  result.toString();
 
         //logic to enter every digit of the number
-        for (var i = 0; i < firstNumber.length; i++) {
-            let j = firstNumber.charAt(i);
-            let path = "//android.widget.ImageButton[@content-desc='".concat(j).concat("']");
-            await $(path).click();
-        }
-        //getting from pageObjects
+        await CalcScreen.enterNumber(firstNumber);
+
+        //clicking on plus button to perform the addition
         await CalcScreen.plusButton.click();
 
         //logic to enter every digit of the number
-        for (var i = 0; i < secondNumber.length; i++) {
-            let j = secondNumber.charAt(i);
-            let path = "//android.widget.ImageButton[@content-desc='".concat(j).concat("']");
-            await $(path).click();
-        }
-        // await driver.setImplicitTimeout(50000);
-        await expect(resultField).toHaveText(resultNumber);
+        await CalcScreen.enterNumber(secondNumber);
+
+        //verify result of the addition of two numbers
+        var actualNumber = await CalcScreen.resultField.getText();
+        await expect(actualNumber).toEqual(resultNumber);
     });
 });
