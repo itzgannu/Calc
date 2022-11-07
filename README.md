@@ -38,9 +38,13 @@ Commands followed while creating project -
   As a user, we want to perform automation testing for the test case "addition of two numbers & then verifying the result using android calculator application in android device"
   
   Given the user is on android calculator app
+  
   When the user enters the first number (if multiple units in a number, program enters all the digits one by one)
+  
   And the user clicks on plus symbol on the screen
+  
   Then the user enters the second number (if multiple units in a number, program enters all the digits one by one)
+  
   Then the user verifies the result on the screen which is displayed 
   
  
