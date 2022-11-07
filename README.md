@@ -11,6 +11,15 @@ Tools Required :
 6) Emulator / Android device
 7) Webdriver IO (to be installed via project setup)
 
+Commands needs to be followed when downloaded the project for the first time -
+
+1) Download the project
+2) Open terminal
+3) run the command "npm install"
+4) Let everything get installed & can verify by checking the creation of "node-modules" folder in the project
+5) run "npx wdio" command to run the test
+6) need to update the capabilities with the device name value for the key "appium:udid"
+
 Commands followed while creating project -
 1) npm init (provided the details) else npm init -yes
 2) npm install @wdio/cli (to install webdriver IO)
